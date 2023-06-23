@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap');
 
+:root {
+    --dark-grey: #363753;
+    --light-grey: #DFE3EE; 
+    --white: #FEFEFE;
+    --green: #5CD2C6;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
     font-family: SF Pro Text;
+    background-image: linear-gradient(var(--light-grey) 10%, transparent);
+    backdrop-filter: blur(25px);
+    color: var(--dark-grey);
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -25,6 +37,7 @@ header {
         font-size: 20px;
         font-family: 'Maven Pro', sans-serif;
     }
+
 }
 
 .navbar {
@@ -38,6 +51,16 @@ header {
         justify-content: space-between;
         gap: 30px;
         padding: 0;
+
+        & li a {
+            color: var(--dark-grey);
+            text-decoration: none;
+            transition: all 0.4s;
+        }
+
+        & li a:hover {
+            color: var(--green);
+        }
     }
 }
 
