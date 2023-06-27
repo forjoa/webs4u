@@ -25,9 +25,9 @@ function Presentation() {
                 <img src={guy}></img>
             </div>
             <div className="text">
-                <span>WE ARE</span>
+                <span>SOMOS</span>
                 <h1>CODE MATCH</h1>
-                <h3>WHERE YOU COULD FIND YOUR</h3>
+                <h3>DONDE ENCONTRARÁS A TU</h3>
                 <h2>WEBSITE DEVELOPER</h2>
             </div>
             <div style={{
