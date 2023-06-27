@@ -1,6 +1,7 @@
 import Header from "./Header"
 import '../src/styles/App.css'
 import Presentation from "./Presentation"
+import Us from "./Us"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
     <Header></Header>
     <Presentation></Presentation>
+    <Us></Us>
     </>
   )
 }
