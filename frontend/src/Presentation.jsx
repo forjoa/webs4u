@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import guy from './assets/guy.png'
 import './styles/Presentation.css'
+import { motion } from 'framer-motion'
 
 function Presentation() {
     const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -19,6 +20,8 @@ function Presentation() {
         }
     })
 
+    const sentence = 'CODE MATCH'.split("")
+
     return (
         <main>
             <div className="img">
@@ -26,7 +29,15 @@ function Presentation() {
             </div>
             <div className="text">
                 <span>SOMOS</span>
-                <h1>CODE MATCH</h1>
+                <h1>
+                    {sentence.map((letter, index) => {
+                        return (
+                            <motion.span whileHover={{scale: 1.2 , color: '#5CD2C6', cursor: 'pointer'}} key={index}>
+                                {letter}
+                            </motion.span>
+                        )
+                    })}
+                </h1>
                 <h3>DONDE ENCONTRARÁS A TU</h3>
                 <h2>WEBSITE DEVELOPER</h2>
             </div>
