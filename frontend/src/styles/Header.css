@@ -18,7 +18,7 @@ header {
     padding: 20px 100px;
     font-family: SF Pro Text;
     background-image: linear-gradient(var(--light-grey) 10%, transparent);
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(22px);
     color: var(--dark-grey);
     position: sticky;
     top: 0;

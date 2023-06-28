@@ -1,7 +1,10 @@
-import Header from "./Header"
+import Header from "./Header.jsx"
+import Presentation from "./Presentation.jsx"
+import Us from "./Us.jsx"
+import Contact from "./Contact.jsx"
+
 import '../src/styles/App.css'
-import Presentation from "./Presentation"
-import Us from "./Us"
+
 import { motion, useScroll } from "framer-motion"
 
 function App() {
@@ -10,13 +13,14 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Presentation></Presentation>
-      <Us></Us>      
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
+      <Header></Header>
+      <Presentation></Presentation>
+      <Us></Us>
+      <Contact></Contact>
     </>
   )
 }
