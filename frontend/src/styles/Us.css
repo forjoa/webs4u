@@ -8,3 +8,9 @@ article {
     width: 100%;
     font-family: SF Pro Text;
 }
+
+@media (max-width: 900px) {
+    article {
+        padding: 0 30px;
+    }
+}

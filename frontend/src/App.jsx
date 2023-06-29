@@ -13,14 +13,14 @@ function App() {
 
   return (
     <>
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
       <Header></Header>
       <Presentation></Presentation>
       <Us></Us>
       <Contact></Contact>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
     </>
   )
 }
