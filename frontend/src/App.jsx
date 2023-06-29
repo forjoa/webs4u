@@ -2,6 +2,7 @@ import Header from "./Header.jsx"
 import Presentation from "./Presentation.jsx"
 import Us from "./Us.jsx"
 import Contact from "./Contact.jsx"
+import Footer from "./Footer.jsx"
 
 import '../src/styles/App.css'
 
@@ -17,6 +18,7 @@ function App() {
       <Presentation></Presentation>
       <Us></Us>
       <Contact></Contact>
+      <Footer></Footer>
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
