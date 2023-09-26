@@ -1,5 +1,8 @@
 import '../styles/Header.css'
+
 import logo from '../assets/photo-logo.png'
+
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 function Header() {
@@ -34,9 +37,9 @@ function Header() {
 
           <nav className={menu_class}>
             <ul>
-              <li><a href='#'>Inicio</a></li>
-              <li><a href='#'>Nosotros</a></li>
-              <li><a href='#'>Buscar</a></li>
+              <li><Link to='/'>Inicio</Link></li>
+              <li><Link to='/'>Nosotros</Link></li>
+              <li><Link to='/'>Buscar</Link></li>
             </ul>
           </nav>
 
