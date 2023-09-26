@@ -1,5 +1,5 @@
-import './styles/Header.css'
-import logo from './assets/photo-logo.png'
+import '../styles/Header.css'
+import logo from '../assets/photo-logo.png'
 import { useState } from 'react'
 
 function Header() {

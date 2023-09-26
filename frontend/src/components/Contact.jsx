@@ -1,5 +1,5 @@
-import './styles/Contact.css'
-import cwu from './assets/3459559.jpg'
+import '../styles/Contact.css'
+import cwu from '../assets/3459559.jpg'
 
 function Contact() {
     return (

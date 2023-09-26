@@ -1,8 +1,8 @@
-import './styles/Footer.css'
+import '../styles/Footer.css'
 
-import Instagram from './icons/Instagram.jsx'
-import Facebook from './icons/Facebook.jsx'
-import Linkedin from './icons/Linkedin.jsx'
+import Instagram from '../icons/Instagram.jsx'
+import Facebook from '../icons/Facebook.jsx'
+import Linkedin from '../icons/Linkedin.jsx'
 
 function Footer() {
     return (

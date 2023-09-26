@@ -1,28 +1,10 @@
-import Header from "./Header.jsx"
-import Presentation from "./Presentation.jsx"
-import Us from "./Us.jsx"
-import Contact from "./Contact.jsx"
-import Footer from "./Footer.jsx"
-
-import '../src/styles/App.css'
-
-import { motion, useScroll } from "framer-motion"
+import Home from './components/Home.jsx'
 
 function App() {
 
-  const { scrollYProgress } = useScroll();
-
   return (
     <>
-      <Header></Header>
-      <Presentation></Presentation>
-      <Us></Us>
-      <Contact></Contact>
-      <Footer></Footer>
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
+      <Home />
     </>
   )
 }

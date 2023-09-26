@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import guy from './assets/guy.png'
-import './styles/Presentation.css'
+import guy from '../assets/guy.png'
+import '../styles/Presentation.css'
 import { motion } from 'framer-motion'
 
 function Presentation() {
