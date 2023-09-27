@@ -9,7 +9,7 @@ import '../styles/Us.css'
 function Us () {
     return (
         <>
-        <article> 
+        <article id='us'> 
             <UsCard 
                 title='¿Quiénes somos?'
                 text='En Code Match queremos que tomes la decisión correcta. Queremos que hagas Match con tu próximo desarrollador.'

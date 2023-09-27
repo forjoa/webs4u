@@ -38,7 +38,7 @@ function Header() {
           <nav className={menu_class}>
             <ul>
               <li><Link to='/'>Inicio</Link></li>
-              <li><Link to='/'>Nosotros</Link></li>
+              <li><a href='#us'>Nosotros</a></li>
               <li><Link to='/'>Buscar</Link></li>
             </ul>
           </nav>
