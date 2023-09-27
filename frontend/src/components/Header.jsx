@@ -39,7 +39,7 @@ function Header() {
             <ul>
               <li><Link to='/'>Inicio</Link></li>
               <li><a href='#us'>Nosotros</a></li>
-              <li><Link to='/'>Buscar</Link></li>
+              <li><Link to='/search'>Buscar</Link></li>
             </ul>
           </nav>
 
