@@ -1,8 +1,9 @@
 
-const Dev = () => {
+const Dev = ({ data }) => {
+    
     return (
         <div className='dev'>
-
+            <p>{data.name}</p>
         </div>
     )
 }

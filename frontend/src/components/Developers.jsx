@@ -15,10 +15,9 @@ const Developers = () => {
 
     return (
         <main>
-            {devs.map(dev => {
-                console.log(dev)
+            {devs.map((dev, key) => {
                 return (
-                    <Dev />
+                    <Dev key={key} data={dev}/>
                 )
             })
             }
