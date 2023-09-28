@@ -1,26 +1,25 @@
 import Header from './Header.jsx'
+import Developers from './Developers.jsx'
 
 import '../styles/Search.css'
+
 import { useEffect } from 'react'
 
 const Search = () => {
+
     useEffect(() => {
-        fetch('http://localhost:3000/developers')
-            .then(response => response.json())
-            .then(data => {
-                //console.log(data)
-            })
-    })
+        document.title = 'Code Match | Buscar'
+    }, [])
 
     return (
         <>
             <Header />
-            <input 
+            <input
                 className='input-search'
-                type='text' 
+                type='text'
                 spellCheck='false'
             />
-
+            <Developers />
         </>
     )
 }

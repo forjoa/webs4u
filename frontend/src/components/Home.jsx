@@ -7,8 +7,13 @@ import Footer from "./Footer.jsx"
 import '../styles/App.css'
 
 import { motion, useScroll } from "framer-motion"
+import { useEffect } from "react"
 
 function Home() {
+
+  useEffect(() => {
+    document.title = 'Code Match | Inicio'
+}, [])
 
   const { scrollYProgress } = useScroll();
 
