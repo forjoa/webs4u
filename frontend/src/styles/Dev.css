@@ -5,6 +5,10 @@
     --green: #5CD2C6;
 }
 
+.devs-container {
+    margin-bottom: 30px;
+}
+
 .card {
     width: 350px;
     height: 254px;
