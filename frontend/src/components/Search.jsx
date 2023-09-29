@@ -1,5 +1,6 @@
 import Header from './Header.jsx'
 import Developers from './Developers.jsx'
+import Footer from './Footer.jsx'
 
 import '../styles/Search.css'
 
@@ -20,6 +21,7 @@ const Search = () => {
                 spellCheck='false'
             />
             <Developers />
+            <Footer />
         </>
     )
 }
