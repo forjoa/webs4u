@@ -1,0 +1,60 @@
+:root {
+    --dark-grey: #363753;
+    --light-grey: #DFE3EE;
+    --white: #FEFEFE;
+    --green: #5CD2C6;
+}
+
+.card {
+    width: 350px;
+    height: 254px;
+    margin: 0 auto;
+    background-color: var(--dark-grey);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.card_content {
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+.card_content p {
+    margin: 0;
+}
+
+.card_content span {
+    color: var(--light-grey);
+}

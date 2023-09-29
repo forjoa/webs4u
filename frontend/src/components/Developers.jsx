@@ -14,14 +14,14 @@ const Developers = () => {
     }, [])
 
     return (
-        <main>
+        <article className='devs-container'>
             {devs.map((dev, key) => {
                 return (
                     <Dev key={key} data={dev}/>
                 )
             })
             }
-        </main>
+        </article>
     )
 }
 
