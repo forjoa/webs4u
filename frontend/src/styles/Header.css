@@ -57,6 +57,12 @@ header {
         gap: 30px;
         padding: 0;
 
+        & li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         & li a {
             color: var(--dark-grey);
             text-decoration: none;
@@ -65,6 +71,24 @@ header {
 
         & li a:hover {
             color: var(--green);
+        }
+
+        & li button {
+            font-family: SF Pro Text;
+            font-size: 15px;
+            width: auto;
+            height: auto;
+            padding: 10px 12px;
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        & li button:hover {
+            filter: opacity(0.7);
         }
     }
 }

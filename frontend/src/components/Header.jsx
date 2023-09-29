@@ -40,6 +40,7 @@ function Header() {
               <li><Link to='/'>Inicio</Link></li>
               <li><a href='#us'>Nosotros</a></li>
               <li><Link to='/search'>Buscar</Link></li>
+              <li><button>Iniciar Sesión</button></li>
             </ul>
           </nav>
 
