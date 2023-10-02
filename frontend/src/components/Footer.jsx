@@ -21,7 +21,7 @@ function Footer() {
                     <a href='https://www.linkedin.com/in/joaquin-trujillo-851547254/' target='_blank'>LinkedIn</a>
                 </li>
             </ul>
-            <p>© All rights reserved: Joaquin Trujillo</p>
+            <p>© Todos los derechos reservados: Joaquin Trujillo</p>
         </footer>
     )
 }
