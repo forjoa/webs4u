@@ -1,0 +1,21 @@
+:root {
+    --dark-grey: #363753;
+    --light-grey: #DFE3EE;
+    --white: #FEFEFE;
+    --green: #5CD2C6;
+}
+
+.login-form {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    height: auto;
+    padding: 50px 20px;
+    background-color: var(--white);
+    border-radius: 15px;
+    z-index: 1000;
+    box-shadow: 0px 0px 1500px var(--dark-grey);
+  }
+  

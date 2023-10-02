@@ -1,7 +1,8 @@
+import '../styles/Login.css'
 
 const Login = () => {
     return (
-        <form>
+        <form className='login-form'>
             <label htmlFor='name'>Nombre</label>
             <br></br>
             <input type="text" name="name" placeholder="Nombre" />

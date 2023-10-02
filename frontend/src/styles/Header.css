@@ -136,6 +136,11 @@ header {
             & li a:hover {
                 color: var(--light-grey);
             }
+
+            & li button {
+                background-color: var(--light-grey);
+                color: var(--dark-grey);
+            }
         }
     }
 
