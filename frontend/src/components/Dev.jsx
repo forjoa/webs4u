@@ -1,9 +1,11 @@
 import '../styles/Dev.css'
 
+import Popup from 'reactjs-popup'
+import DevInfo from './DevInfo.jsx'
+
 const Dev = ({ data }) => {
 
     return (
-        <div className='dev'>
             <div className="card">
                 <div className="tools">
                     <div className="circle">
@@ -24,10 +26,14 @@ const Dev = ({ data }) => {
                     <div className="info-container">
                         <span className='p-lang'>{data.programming_lang}</span>
                         <span>{data.email}</span>
+                        <Popup trigger={<button className='info-btn'>Información</button>} modal nested>
+                            {close => (
+                                <DevInfo data={data} close={close} />
+                            )}
+                        </Popup>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 

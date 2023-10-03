@@ -1,5 +1,6 @@
 :root {
     --dark-grey: #363753;
+    --medium-grey: #464764;
     --light-grey: #DFE3EE;
     --white: #FEFEFE;
     --green: #5CD2C6;
@@ -95,6 +96,19 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.info-btn {
+    color: var(--light-grey);
+    background-color: var(--medium-grey);
+    border-radius: 10px;
+    font-family: SF Pro Text;
+    padding: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+
 
 @media (max-width: 900px) {
     .card {
