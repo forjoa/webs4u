@@ -17,8 +17,14 @@ const Dev = ({ data }) => {
                     </div>
                 </div>
                 <div className="card_content">
-                    <p>{data.name}</p>
-                    <span>{data.email}</span>
+                    <div className="profile-photo-container">
+                        <img src={data.photo} />
+                        <p>{data.name}</p>
+                    </div>
+                    <div className="info-container">
+                        <span className='p-lang'>{data.programming_lang}</span>
+                        <span>{data.email}</span>
+                    </div>
                 </div>
             </div>
         </div>
