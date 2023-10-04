@@ -28,3 +28,15 @@
     border: none;
     background: #ffffff;
 }
+
+.popup-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+
+.header {
+    margin: 0;
+}
+
+.content ul {
+    margin: 0;
+}

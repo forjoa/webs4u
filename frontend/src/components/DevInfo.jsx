@@ -1,21 +1,25 @@
 import '../styles/DevInfo.css'
 
-const DevInfo = ({ data , close}) => {
+const DevInfo = ({ data, close }) => {
+    const pLang = data.programming_lang.split('/')
+
     return (
         <div className="modal">
             <button className="close" onClick={close}>
                 &times;
             </button>
-            <div className="header"> Modal Title </div>
+            <h2 className="header">{data.name}</h2>
             <div className="content">
-                {' '}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-                Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-                delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-                commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-                explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+                {data.description}
+                <ul>
+                    {
+                        pLang.map((lang, index) => {
+                            return (
+                                <li key={index}>{lang}</li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         </div>
     )

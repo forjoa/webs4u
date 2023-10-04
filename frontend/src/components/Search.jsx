@@ -21,7 +21,7 @@ const Search = () => {
                 spellCheck='false'
             />
             <Developers />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

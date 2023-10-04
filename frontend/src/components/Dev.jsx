@@ -26,7 +26,7 @@ const Dev = ({ data }) => {
                     <div className="info-container">
                         <span className='p-lang'>{data.programming_lang}</span>
                         <span>{data.email}</span>
-                        <Popup trigger={<button className='info-btn'>Información</button>} modal nested>
+                        <Popup trigger={<button className='info-btn'>Contáctame</button>} modal nested>
                             {close => (
                                 <DevInfo data={data} close={close} />
                             )}
