@@ -1,8 +1,9 @@
 import '../styles/Login.css'
 
-const Login = () => {
+const Login = (close) => {
     return (
         <form className='login-form'>
+            <button onClick={close}>&times;</button>
             <label htmlFor='name'>Nombre</label>
             <br></br>
             <input type="text" name="name" placeholder="Nombre" />
