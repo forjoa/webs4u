@@ -1,5 +1,6 @@
 :root {
     --dark-grey: #363753;
+    --medium-grey: #464764;
     --light-grey: #DFE3EE;
     --white: #FEFEFE;
     --green: #5CD2C6;
@@ -34,7 +35,7 @@
     background: rgba(0, 0, 0, .5);
 }
 
-.login-form input[type="text"],
+.login-form input[type="password"],
 .login-form input[type="email"] {
     border: none;
     border-bottom: 1px solid var(--dark-grey);
@@ -67,4 +68,13 @@
 
 .submit-login:hover {
     filter: opacity(0.7);
+}
+
+.register-box {
+    border-top: 1px solid var(--light-grey);
+    text-align: center;
+}
+
+.sign-in-btn {
+    color: var(--medium-grey);
 }
