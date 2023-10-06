@@ -72,6 +72,13 @@ aside {
     }
 }
 
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    font-family: SF Pro Text;
+    font-size: 15px;
+}
+
 @media (max-width: 900px) {
     aside {
         height: auto;
