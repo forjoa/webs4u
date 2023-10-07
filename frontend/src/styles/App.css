@@ -1,11 +1,39 @@
+:root {
+    --dark-grey: #363753;
+    --medium-grey: #464764;
+    --light-grey: #DFE3EE;
+    --white: #FEFEFE;
+    --green: #5CD2C6;
+}
+
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 9px;
+    margin-right: 10px;
+}
+
+/* Color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: var(--light-grey);
+}
+
+/* Color de la perilla (thumb) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-grey);
+    border-radius: 15px;
 }
 
 .progress-bar {
@@ -17,5 +45,5 @@ body {
     background: #5CD2C6;
     transform-origin: 0%;
     z-index: 999;
-    box-shadow: 0px 0px 49px 1px rgba(0,0,0,0.75);
-  }
+    box-shadow: 0px 0px 49px 1px rgba(0, 0, 0, 0.75);
+}
