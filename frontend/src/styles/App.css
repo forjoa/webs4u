@@ -21,13 +21,13 @@ html {
 
 /* Barra de desplazamiento */
 ::-webkit-scrollbar {
-    width: 9px;
+    width: 10px;
     margin-right: 10px;
 }
 
 /* Color de fondo de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
-    background-color: var(--light-grey);
+    margin-right: 10px;
 }
 
 /* Color de la perilla (thumb) de la barra de desplazamiento */
