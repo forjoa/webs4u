@@ -30,69 +30,67 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
 
-    & img {
-        height: 50px;
-        width: 50px;
-        object-fit: cover;
-    }
+.logo img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
 
-    & p {
-        margin: 0;
-        font-size: 20px;
-        font-family: 'Maven Pro', sans-serif;
-    }
-
+.logo p {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    & ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        gap: 30px;
-        padding: 0;
-
-        & li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        & li a {
-            color: var(--dark-grey);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        & li a:hover {
-            color: var(--green);
-        }
-
-        & li button {
-            font-family: SF Pro Text;
-            font-size: 15px;
-            width: auto;
-            height: auto;
-            padding: 10px 12px;
-            background-color: var(--green);
-            color: var(--white);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        & li button:hover {
-            filter: opacity(0.7);
-        }
-    }
 }
 
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    color: var(--dark-grey);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu li a:hover {
+    color: var(--green);
+}
+
+.menu li button {
+    font-family: SF Pro Text;
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    padding: 10px 12px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu li button:hover {
+    filter: opacity(0.7);
+}
 
 @media (max-width: 900px) {
     header {
@@ -108,7 +106,6 @@ header {
         justify-content: space-between;
         cursor: pointer;
     }
-
 
     .burger-bar {
         width: 100%;
@@ -127,38 +124,36 @@ header {
         top: 0;
         z-index: -1;
         backdrop-filter: blur(23px);
-
-        & ul {
-            flex-direction: column;
-            padding-top: 100px;
-            padding-left: 20px;
-
-            & li a:hover {
-                color: var(--light-grey);
-            }
-
-            & li button {
-                background-color: var(--light-grey);
-                color: var(--dark-grey);
-            }
-        }
     }
 
-    /* ------------- sliding menu ------------------ */
+    .menu ul {
+        flex-direction: column;
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+
+    .menu li a:hover {
+        color: var(--light-grey);
+    }
+
+    .menu li button {
+        background-color: var(--light-grey);
+        color: var(--dark-grey);
+    }
+
     .hidden {
         display: none;
     }
 
     .visible {
         display: inherit;
-        box-shadow: -67px 0px 179px 16px rgba(0,0,0,0.75);
+        box-shadow: -67px 0px 179px 16px rgba(0, 0, 0, 0.75);
     }
 
-    /* ----- animations--------- */
-    /* clicked */
     .burger-bar.clicked {
         background-color: var(--dark-grey);
     }
+
     .burger-bar.clicked:nth-child(1) {
         transform: rotate(45deg) translate(0.75em, 1.25em);
         transition: ease-out 0.5s;
@@ -174,7 +169,6 @@ header {
         transition: ease-out 0.5s;
     }
 
-    /* unclicked */
     .burger-bar.unclicked {
         transform: rotate(0) translate(0);
         transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;

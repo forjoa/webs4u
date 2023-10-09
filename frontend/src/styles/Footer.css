@@ -14,31 +14,31 @@ footer {
     padding: 50px 0;
     flex-direction: column;
     bottom: 0;
+}
 
-    & ul {
-        margin: 0;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        gap: 30px;
+footer ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 30px;
+}
 
-        & li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
+footer li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 
-            & img {
-                aspect-ratio: 1 / 1;
-                width: 30px;
-            }
+footer li img {
+    aspect-ratio: 1 / 1;
+    width: 30px;
+}
 
-            & a {
-                text-decoration: none;
-                color: black;
-            }
-        }
-    }
+footer li a {
+    text-decoration: none;
+    color: black;
 }

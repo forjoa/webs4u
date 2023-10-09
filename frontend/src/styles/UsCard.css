@@ -1,6 +1,6 @@
 :root {
     --dark-grey: #363753;
-    --light-grey: #ededed; 
+    --light-grey: #ededed;
     --white: #FEFEFE;
     --green: #5CD2C6;
 }
@@ -15,19 +15,19 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 300px -86px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 300px -86px rgba(0, 0, 0, 0.75);
+}
 
-    & h3 {
-        color: var(--dark-grey);
-        margin: 0;
-    }
+section h3 {
+    color: var(--dark-grey);
+    margin: 0;
+}
 
-    & p {
-        text-align: center;
-    }
+section p {
+    text-align: center;
+}
 
-    & .card-img {
-        aspect-ratio: 4 / 4;
-        width: 300px;
-    }
+section .card-img {
+    aspect-ratio: 4 / 4;
+    width: 300px;
 }

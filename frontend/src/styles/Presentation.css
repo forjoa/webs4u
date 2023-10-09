@@ -22,13 +22,13 @@ main {
 .img {
     height: 100%;
     width: 50%;
+}
 
-    & img {
-        height: 99%;
-        width: 100%;
-        object-fit: cover;
-        filter: saturate(0.8);
-    }
+.img img {
+    height: 99%;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(0.8);
 }
 
 .text {
@@ -36,52 +36,48 @@ main {
     flex-direction: column;
     padding: 200px 80px;
     width: 50%;
-
-    & h1 {
-        font-family: 'Maven Pro', sans-serif;
-        font-size: 81px;
-
-        & span {
-            display: inline-block;
-        }
-    }
-
-    & h2 {
-        font-size: 36px;
-        font-weight: bolder;
-        color: var(--green);
-    }
-
-    & h1,
-    h2,
-    h3,
-    span {
-        margin: 0;
-    }
-
-    & span {
-        font-weight: bold;
-    }
 }
 
 .text h1 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 81px;
     white-space: nowrap;
     border-right: 5px solid;
     width: 9.7ch;
-    animation: typing 1s steps(10),
-        blink .5s infinite step-end alternate;
+    animation: typing 1s steps(10), blink .5s infinite step-end alternate;
     overflow: hidden;
+}
+
+.text h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: var(--green);
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text span {
+    margin: 0;
+}
+
+.text span {
+    font-weight: bold;
+}
+
+.text h1 span {
+    display: inline-block;
 }
 
 @keyframes typing {
     from {
-        width: 0
+        width: 0;
     }
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent
+        border-color: transparent;
     }
 }
 
@@ -91,34 +87,34 @@ main {
         height: auto;
         padding: 0 30px;
         margin-top: 10px;
+    }
 
-        & .img {
-            width: 100%;
-        }
+    .img {
+        width: 100%;
+    }
 
-        & .text {
-            padding: 0;
-            width: 100%;
-            text-align: center;
+    .text {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
 
-            & span {
-                font-size: 15px;
-            }
+    .text span {
+        font-size: 15px;
+    }
 
-            & h1 {
-                display: inline-block;
-                margin: 0 auto;
-                width: auto;
-                font-size: 50px;
+    .text h1 {
+        display: inline-block;
+        margin: 0 auto;
+        width: auto;
+        font-size: 50px;
+    }
 
-                & span {
-                    font-size: 50px;
-                }
-            }
+    .text h1 span {
+        font-size: 50px;
+    }
 
-            & h2 {
-                font-size: 45px;
-            }
-        }
+    .text h2 {
+        font-size: 45px;
     }
 }
