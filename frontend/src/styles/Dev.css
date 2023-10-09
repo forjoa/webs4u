@@ -113,9 +113,19 @@
 @media (max-width: 900px) {
     .card {
         width: 370px;
+        height: auto;
     }
 
     .profile-photo-container img {
         width: 120px;
+    }
+
+    .card_content {
+        flex-direction: column;
+    }
+
+    .info-container {
+        margin: 20px 0;
+        gap: 15px;
     }
 }
