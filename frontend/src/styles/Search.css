@@ -8,9 +8,10 @@
 .input-search {
     margin: auto;
     display: block;
-    width: 60%;
+    width: 85%;
     height: 30px;
     font-family: SF Pro Text;
+    font-size: 16px;
     outline: none;
     border: none;
     border-bottom: 1px solid var(--dark-grey);
