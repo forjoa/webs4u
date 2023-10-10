@@ -19,6 +19,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--green);
+    color: var(--white);
+}
+
 .progress-bar {
     position: fixed;
     bottom: 0;
