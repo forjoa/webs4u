@@ -84,6 +84,10 @@
     filter: opacity(0.7);
 }
 
+.content ul {
+    list-style:square;
+}
+
 @media (max-width: 900px) {
     .devinfo-content {
         flex-direction: column;
