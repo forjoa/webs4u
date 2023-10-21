@@ -1,12 +1,11 @@
 import '../styles/Header.css'
 
-import logo from '../assets/photo-logo.png'
-
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 import Login from './Login.jsx'
 import Popup from 'reactjs-popup'
+import Logo from './Logo.jsx'
 
 function Header() {
 
@@ -30,10 +29,7 @@ function Header() {
   return (
     <header>
 
-      <div className="logo">
-        <img src={logo}></img>
-        <p>CODE MATCH</p>
-      </div>
+      <Logo />
 
       <div className="navbar">
 
