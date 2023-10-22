@@ -2,7 +2,10 @@ import Logo from './Logo.jsx'
 
 import '../styles/Register.css'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
+
+import locked from '../icons/locked.svg'
+import unlocked from '../icons/unlocked.svg'
 
 const Register = () => {
     const languages_frameworks = [
@@ -43,8 +46,8 @@ const Register = () => {
         "Ember.js",
         "Ruby on Rails"
     ]
-
     const [selectedLanguages, setSelectedLanguages] = useState([])
+    const [isUnlocked, setIsUnlocked] = useState(false)
 
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value
@@ -58,7 +61,6 @@ const Register = () => {
         const updatedSelectedLanguages = selectedLanguages.filter((lang) => lang !== language)
         setSelectedLanguages(updatedSelectedLanguages)
     }
-
 
     return (
         <>
@@ -75,8 +77,20 @@ const Register = () => {
                     <label htmlFor='email'>Correo:</label>
                     <input type='email' className='email' name='email' id='email' autoComplete='email'></input>
 
-                    <label htmlFor='password'>Contraseña:</label>
-                    <input type='password' className='password' name='password' id='password'></input>
+                    <label htmlFor="password">Contraseña:</label>
+                    <div className="password-input">
+                        <input
+                            type={isUnlocked ? 'text' : 'password'}
+                            className="password"
+                            name="password"
+                            id="password"
+                        />
+                        <img
+                            src={isUnlocked ? unlocked : locked}
+                            onClick={() => setIsUnlocked(!isUnlocked)}
+                            alt="password visibility"
+                        />
+                    </div>
 
                     <label htmlFor="languages">Lenguajes y frameworks:</label>
                     <select name="languages" className="languages" id="languages" onChange={handleLanguageChange}>
@@ -87,7 +101,6 @@ const Register = () => {
                             )
                         })}
                     </select>
-
                     <div className="selected-languages">
                         {selectedLanguages.map((selectedLang, index) => (
                             <div key={index} className="selected-language">
@@ -96,7 +109,7 @@ const Register = () => {
                                     type="button"
                                     onClick={() => removeSelectedLanguage(selectedLang)}
                                 >
-                                    X
+                                    &times;
                                 </button>
                             </div>
                         ))}
@@ -105,10 +118,10 @@ const Register = () => {
                     <label htmlFor='description'>Descríbete:</label>
                     <textarea className='description' name='description' id='description'></textarea>
 
-                    <label htmlFor='photo'>Foto de perfil</label>
+                    <label htmlFor='photo'>Foto de perfil:</label>
                     <input type='file' className='photo' name='photo' id='photo'></input>
 
-                    <input type='submit' value='Enviar'></input>
+                    <input type='submit' value='Enviar' className='submit' id='submit'></input>
                 </form>
             </main>
         </>
