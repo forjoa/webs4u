@@ -5,7 +5,8 @@ import '../styles/Register.css'
 import { useState, useRef } from 'react'
 
 const Register = () => {
-    const lenguajes_y_frameworks = [
+    const languages_frameworks = [
+        "Astro",
         "Python",
         "JavaScript",
         "Java",
@@ -17,6 +18,7 @@ const Register = () => {
         "Rust",
         "Kotlin",
         "C#",
+        "PHP",
         "TypeScript",
         "HTML/CSS",
         "Node.js",
@@ -41,18 +43,22 @@ const Register = () => {
         "Ember.js",
         "Ruby on Rails"
     ]
-    const [openSelect, setOpenSelect] = useState(false)
 
-    const leagueInput = useRef()
+    const [selectedLanguages, setSelectedLanguages] = useState([])
 
-    function selectValue(e) {
-        leagueInput.current.value = e.target.outerText
-        setOpenSelect(false)
+    const handleLanguageChange = (event) => {
+        const selectedLanguage = event.target.value
+
+        if (!selectedLanguages.includes(selectedLanguage)) {
+            setSelectedLanguages([...selectedLanguages, selectedLanguage])
+        }
     }
 
-    function openOption() {
-        setOpenSelect(true)
+    const removeSelectedLanguage = (language) => {
+        const updatedSelectedLanguages = selectedLanguages.filter((lang) => lang !== language)
+        setSelectedLanguages(updatedSelectedLanguages)
     }
+
 
     return (
         <>
@@ -61,43 +67,48 @@ const Register = () => {
                 <h1>Gracias por elegirnos!</h1>
                 <form action="" className="register-form">
                     <label htmlFor='name'>Nombre: </label>
-                    <input type='text' className='name' name='name' id='name'></input>
+                    <input type='text' className='name' name='name' id='name' autoComplete="given-name"></input>
 
                     <label htmlFor='surname'>Apellido:</label>
-                    <input type='text' className='surname' name='surname' id='surname'></input>
+                    <input type='text' className='surname' name='surname' id='surname' autoComplete="family-name"></input>
 
                     <label htmlFor='email'>Correo:</label>
-                    <input type='email' className='email' name='email' id='email'></input>
+                    <input type='email' className='email' name='email' id='email' autoComplete='email'></input>
 
-                    <label htmlFor='username'>Contraseña:</label>
+                    <label htmlFor='password'>Contraseña:</label>
                     <input type='password' className='password' name='password' id='password'></input>
 
-                    <label htmlFor='languages'>Lenguajes y frameworks:</label>
-                    <div className="select-option">
-                        <input
-                            type="text"
-                            onClick={openOption}
-                            onBlur={() => {
-                                setOpenSelect(false)
-                            }}
-                            ref={leagueInput}
-                            id='league'
-                            placeholder='Selecciona el lenguage o framework'
-                            readOnly
-                        />
+                    <label htmlFor="languages">Lenguajes y frameworks:</label>
+                    <select name="languages" className="languages" id="languages" onChange={handleLanguageChange}>
+                        <option value="">Seleccione un lenguaje o framework</option>
+                        {languages_frameworks.map((lang, index) => {
+                            return (
+                                <option key={index} value={lang}>{lang}</option>
+                            )
+                        })}
+                    </select>
 
-                        <span className={openSelect ? 'icon active' : 'icon'}>x</span>
-
-                        <div className={openSelect ? 'options active' : 'options'}>
-                            {
-                                lenguajes_y_frameworks.map((item, index) => {
-                                    <li onClick={selectValue} key={index}>
-                                        {item}
-                                    </li>
-                                })
-                            }
-                        </div>
+                    <div className="selected-languages">
+                        {selectedLanguages.map((selectedLang, index) => (
+                            <div key={index} className="selected-language">
+                                {selectedLang}
+                                <button
+                                    type="button"
+                                    onClick={() => removeSelectedLanguage(selectedLang)}
+                                >
+                                    X
+                                </button>
+                            </div>
+                        ))}
                     </div>
+
+                    <label htmlFor='description'>Descríbete:</label>
+                    <textarea className='description' name='description' id='description'></textarea>
+
+                    <label htmlFor='photo'>Foto de perfil</label>
+                    <input type='file' className='photo' name='photo' id='photo'></input>
+
+                    <input type='submit' value='Enviar'></input>
                 </form>
             </main>
         </>
