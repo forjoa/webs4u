@@ -13,7 +13,7 @@
     gap: 15px;
 }
 
-.register-form input{
+.register-form input {
     outline: none;
     border: none;
     border-bottom: 1px solid var(--dark-grey);
@@ -32,7 +32,7 @@
 
 .selected-languages {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .selected-language {
@@ -43,12 +43,13 @@
 }
 
 .selected-language button {
-    background-color: var(--yellow);
-    color: white;
-    border: none;
+    background-color: var(--light-grey);
+    color: black;
+    border: 1px solid var(--dark-grey);
     padding: 5px 7px;
     cursor: pointer;
     border-radius: 5px;
+    transition: all .3s;
 }
 
 .selected-language button:hover {
@@ -58,6 +59,7 @@
 select {
     height: 30px;
     cursor: pointer;
+    border-radius: 10px;
     font-family: SF Pro Text;
 }
 
@@ -77,8 +79,8 @@ select option {
     cursor: pointer;
 }
 
-input #file-upload-button {
-    background-color: var(--green);
+input[type='file'] {
+    font-family: SF Pro Text;
 }
 
 .submit {
@@ -90,8 +92,27 @@ input #file-upload-button {
     color: var(--white);
     border-radius: 10px;
     cursor: pointer;
+    transition: all .3s;
 }
 
 .submit:hover {
     filter: opacity(0.7);
+}
+
+.selected-languages {
+    border: 1px solid var(--dark-grey);
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 47.6px;
+}
+@media (max-width: 1200px) {
+    .register {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .register h1 {
+        display: block;
+        margin: 10px auto;
+    }
 }

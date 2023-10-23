@@ -2,7 +2,7 @@ import Logo from './Logo.jsx'
 
 import '../styles/Register.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import locked from '../icons/locked.svg'
 import unlocked from '../icons/unlocked.svg'
@@ -61,6 +61,10 @@ const Register = () => {
         const updatedSelectedLanguages = selectedLanguages.filter((lang) => lang !== language)
         setSelectedLanguages(updatedSelectedLanguages)
     }
+
+    useEffect(() => {
+        document.title = 'Code Match | Register'
+    }, [])
 
     return (
         <>
