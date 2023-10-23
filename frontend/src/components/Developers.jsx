@@ -6,7 +6,7 @@ const Developers = () => {
     const [devs, setDevs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/developers')
+        fetch('http://localhost:3000/api/developers')
             .then(response => response.json())
             .then(data => {
                 setDevs(data)

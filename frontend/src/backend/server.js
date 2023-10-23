@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // show developers
-app.get("/developers", (req, res) => {
+app.get("/api/developers", (req, res) => {
   db.query("SELECT * FROM developers", (err, results) => {
     if (err) {
       console.error("error en la consulta");
@@ -38,6 +38,7 @@ app.post("/doubts", (req, res) => {
   });
 });
 
+// listener
 app.listen(port, () => {
   console.log(`server en port: ${port}`);
 });
