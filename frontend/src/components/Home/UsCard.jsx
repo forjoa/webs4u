@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
-import '../styles/UsCard.css'
+
+import '../../styles/UsCard.css'
 
 const UsCard = ({ title , text , img }) => {
     return (

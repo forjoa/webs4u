@@ -1,10 +1,10 @@
-import UsCard from './UsCard'
+import UsCard from './UsCard.jsx'
 
-import wwa from '../assets/3918929.jpg'
-import www from '../assets/3515462.jpg'
-import wh from '../assets/3190343.jpg'
+import wwa from '../../assets/3918929.jpg'
+import www from '../../assets/3515462.jpg'
+import wh from '../../assets/3190343.jpg'
 
-import '../styles/Us.css'
+import '../../styles/Us.css'
 
 function Us () {
     return (

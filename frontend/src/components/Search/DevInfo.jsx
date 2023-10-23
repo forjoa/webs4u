@@ -1,4 +1,4 @@
-import '../styles/DevInfo.css'
+import '../../styles/DevInfo.css'
 
 const DevInfo = ({ data, close }) => {
     const pLang = data.programming_lang.split('/')

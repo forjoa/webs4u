@@ -33,6 +33,10 @@
 .selected-languages {
     display: flex;
     gap: 15px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 50px;
 }
 
 .selected-language {
@@ -99,12 +103,6 @@ input[type='file'] {
     filter: opacity(0.7);
 }
 
-.selected-languages {
-    border: 1px solid var(--dark-grey);
-    border-radius: 10px;
-    padding: 10px;
-    min-height: 47.6px;
-}
 @media (max-width: 1200px) {
     .register {
         width: 100%;

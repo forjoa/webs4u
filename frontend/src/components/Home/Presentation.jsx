@@ -1,4 +1,4 @@
-import '../styles/Presentation.css'
+import '../../styles/Presentation.css'
 
 import { motion } from 'framer-motion'
 import Spline from '@splinetool/react-spline'

@@ -1,4 +1,4 @@
-import '../styles/Dev.css'
+import '../../styles/Dev.css'
 
 import Popup from 'reactjs-popup'
 import DevInfo from './DevInfo.jsx'

@@ -1,7 +1,7 @@
 import Header from "./Header.jsx"
-import Presentation from "./Presentation.jsx"
-import Us from "./Us.jsx"
-import Contact from "./Contact.jsx"
+import Presentation from "./Home/Presentation.jsx"
+import Us from "./Home/Us.jsx"
+import Contact from "./Home/Contact.jsx"
 import Footer from "./Footer.jsx"
 
 import '../styles/App.css'
@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     document.title = 'Code Match | Inicio'
-}, [])
+  }, [])
 
   const { scrollYProgress } = useScroll();
 
