@@ -3,56 +3,18 @@ import { useState, useEffect } from 'react'
 import locked from '../../icons/locked.svg'
 import unlocked from '../../icons/unlocked.svg'
 
-const RegisterForm = () => {
-    const languages_frameworks = [
-        "Astro",
-        "Python",
-        "JavaScript",
-        "Java",
-        "C++",
-        "Ruby",
-        "Swift",
-        "PHP",
-        "Go",
-        "Rust",
-        "Kotlin",
-        "C#",
-        "PHP",
-        "TypeScript",
-        "HTML/CSS",
-        "Node.js",
-        "React",
-        "Angular",
-        "Vue.js",
-        "Django",
-        "Ruby on Rails",
-        "Spring Boot",
-        "Express.js",
-        "Laravel",
-        "ASP.NET",
-        "Flutter",
-        "TensorFlow",
-        "PyTorch",
-        "Bootstrap",
-        "jQuery",
-        "Symfony",
-        "Flask",
-        "ASP.NET Core",
-        "Vue.js",
-        "Ember.js",
-        "Ruby on Rails",
-        "XML",
-        "Dart"
-    ]
-    const [selectedLanguages, setSelectedLanguages] = useState([])
-    const [isUnlocked, setIsUnlocked] = useState(false)
+import languages_frameworks from '../../constants/languages.js'
 
+const RegisterForm = () => {
     // values from form
     const [name, setName] = useState('')
+    const [surname, setSurname] = useState('')
     const [email, setEmail] = useState('')
     const [pwd, setPwd] = useState('')
-    const [languages, setLanguages] = useState([])
     const [description, setDescription] = useState('')
+
+    const [selectedLanguages, setSelectedLanguages] = useState([])
+    const [isUnlocked, setIsUnlocked] = useState(false)
 
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value
@@ -76,13 +38,37 @@ const RegisterForm = () => {
             <h1>Gracias por elegirnos!</h1>
             <form action="" className="register-form">
                 <label htmlFor='name'>Nombre: </label>
-                <input type='text' className='name' name='name' id='name' autoComplete="given-name"></input>
+                <input
+                    type='text'
+                    className='name'
+                    name='name'
+                    id='name'
+                    autoComplete="given-name"
+                    value={name}
+                    onChange={(e) => { setName(e.target.value) }}
+                />
 
                 <label htmlFor='surname'>Apellido:</label>
-                <input type='text' className='surname' name='surname' id='surname' autoComplete="family-name"></input>
+                <input
+                    type='text'
+                    className='surname'
+                    name='surname'
+                    id='surname'
+                    autoComplete="family-name"
+                    value={surname}
+                    onChange={(e) => { setSurname(e.target.value) }}
+                />
 
                 <label htmlFor='email'>Correo:</label>
-                <input type='email' className='email' name='email' id='email' autoComplete='email'></input>
+                <input
+                    type='email'
+                    className='email'
+                    name='email'
+                    id='email'
+                    autoComplete='email'
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value) }}
+                />
 
                 <label htmlFor="password">Contraseña:</label>
                 <div className="password-input">
@@ -91,6 +77,8 @@ const RegisterForm = () => {
                         className="password"
                         name="password"
                         id="password"
+                        value={pwd}
+                        onChange={(e) => { setPwd(e.target.value) }}
                     />
                     <img
                         src={isUnlocked ? unlocked : locked}
@@ -123,7 +111,13 @@ const RegisterForm = () => {
                 </div>
 
                 <label htmlFor='description'>Descríbete:</label>
-                <textarea className='description' name='description' id='description'></textarea>
+                <textarea
+                    className='description'
+                    name='description'
+                    id='description'
+                    value={description}
+                    onChange={(e) => { setDescription(e.target.value) }}
+                />
 
                 <label htmlFor='photo'>Foto de perfil:</label>
                 <input type='file' className='photo' name='photo' id='photo'></input>
